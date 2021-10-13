@@ -2,10 +2,7 @@ package PboTuKel;
 
 public class clsMain {
 
-    String IdUser;
-    String PassUser;
     int JumTiket;
-    int Total;
     int Uang;
 
     // untuk username
