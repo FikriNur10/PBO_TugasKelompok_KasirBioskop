@@ -13,6 +13,7 @@ public class Menu extends Component implements ActionListener{
     private static JButton film2;
     private static JButton film3;
     private static JButton film4;
+    private static JButton Keluar;
 
     public void MenuPil(){
 
@@ -57,6 +58,13 @@ public class Menu extends Component implements ActionListener{
         film4.setText("Superman");
         panel.add(film4);
 
+        // Quit //
+        Keluar = new JButton();
+        Keluar.setPreferredSize(new Dimension(120,30));
+        Keluar.setActionCommand(Actions.Keluar.name());
+        Keluar.addActionListener((ActionListener) new Menu());
+        Keluar.setText("Quit");
+        panel.add(Keluar);
 
         frame.setVisible(true);
 
@@ -131,12 +139,18 @@ public class Menu extends Component implements ActionListener{
             JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumalh Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
         }
+
+        do{
+            System.exit(0);
+        }while(evt.getActionCommand() == Actions.Keluar.name());
+
     }
 
     private enum Actions {
         film1,
         film2,
         film3,
-        film4
+        film4,
+        Keluar
     }
 }
