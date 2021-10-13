@@ -14,15 +14,10 @@ public class MainProg implements ActionListener{
     private static JPasswordField passwordText;
     private static JButton button;
     private static JLabel success;
-    private static JButton film1;
-    private static JButton film2;
-    private static JButton film3;
-    private static JButton film4;
-    private static boolean sucesssed;
+
 
     public static void main(String[] args) {
 
-        clsMain objMain = new clsMain();
         FormLogin();
 
     }
@@ -81,14 +76,13 @@ public class MainProg implements ActionListener{
 
         if(IdUser.equals(objMain.IdUser()) && PassUser.equals(objMain.PassUser())){
 
-            sucesssed = true;
             success.setText("Login Successfull!");
             objMenu.MenuPil();
 
         }else{
 
-            sucesssed = false;
             success.setText("Wrong Password");
+
         }
 
     }
