@@ -75,7 +75,7 @@ public class MainProg implements ActionListener{
             objMenu.MenuPil();
 
         }else{
-
+            JOptionPane.showMessageDialog(null,"Password Salah Coba Lagi","Warning",JOptionPane.ERROR_MESSAGE);
             success.setText("Wrong Password");
 
         }

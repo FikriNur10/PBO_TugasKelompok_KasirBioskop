@@ -72,68 +72,49 @@ public class Menu extends Component implements ActionListener{
 
     public void actionPerformed(java.awt.event.ActionEvent evt){
         clsMain objMain = new clsMain();
-        if(evt.getActionCommand() == Actions.film1.name()){
+        do{
+            if (evt.getActionCommand() == Actions.film1.name()) {
 
-            String NamaFilm = "Squid Game";
-            System.out.println("Nama Film : Squid Game");
+                String NamaFilm = "Squid Game";
+                System.out.println("Nama Film : Squid Game");
+
+            } else if (evt.getActionCommand() == Actions.film2.name()) {
+
+                String NamaFilm = "Joker 2019";
+                System.out.println("Nama Film : Joker 2019");
+
+            } else if (evt.getActionCommand() == Actions.film3.name()) {
+
+                String NamaFilm = "Avengers : End Game";
+                System.out.println("Nama Film : Avangers : End Game");
+
+
+            } else if (evt.getActionCommand() == Actions.film4.name()) {
+
+                String NamaFilm = "Superman";
+                System.out.println("Nama Film : Superman");
+
+            }
+
             String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
-            System.out.println("Total Harga : " + objMain.HitungHarga());
-            JOptionPane.showMessageDialog(null,"\nPembayaran" + "\nTotal Tiket : " + JumTiket + "\nJumlah yang harus dibayar : " + objMain.HitungHarga(),"Bayar",JOptionPane.INFORMATION_MESSAGE);
-            String Uang = JOptionPane.showInputDialog("Masukan Jumlah Uang : ");
-            System.out.println("Masukan Jumlah Uang : " + Uang);
-            objMain.Uang = Integer.parseInt(Uang);
-            System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            if(objMain.JumTiket == 0){
 
-        }else if (evt.getActionCommand() == Actions.film2.name()){
+                JOptionPane.showMessageDialog(null,"Jumlah tiket tidak valid","Error",JOptionPane.ERROR_MESSAGE);
 
-            String NamaFilm = "Joker 2019";
-            System.out.println("Nama Film : Joker 2019");
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
-            System.out.println("Total Harga : " + objMain.HitungHarga());
-            JOptionPane.showMessageDialog(null,"\nPembayaran" + "\nTotal Tiket : " + JumTiket + "\nJumlah yang harus dibayar : " + objMain.HitungHarga(),"Bayar",JOptionPane.INFORMATION_MESSAGE);
-            String Uang = JOptionPane.showInputDialog("Masukan Jumlah Uang : ");
-            System.out.println("Masukan Jumlah Uang : " + Uang);
-            objMain.Uang = Integer.parseInt(Uang);
-            System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            }
+        }while(objMain.JumTiket < 1);
 
-        }else if(evt.getActionCommand() == Actions.film3.name()){
+        String NamaFilm = null;
+        System.out.println("Total Harga : " + objMain.HitungHarga());
+        JOptionPane.showMessageDialog(null, "\nPembayaran" + "\nTotal Tiket : " + objMain.JumTiket + "\nJumlah yang harus dibayar : " + objMain.HitungHarga(), "Bayar", JOptionPane.INFORMATION_MESSAGE);
+        String Uang = JOptionPane.showInputDialog("Masukan Jumlah Uang : ");
+        System.out.println("Masukan Jumlah Uang : " + Uang);
+        objMain.Uang = Integer.parseInt(Uang);
+        System.out.println("Total Kembalian : " + objMain.Kembalian());
+        JOptionPane.showMessageDialog(null, "\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + objMain.JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang + "\nKembalian : " + objMain.Kembalian(), "Pembayaran", JOptionPane.INFORMATION_MESSAGE);
 
-            String NamaFilm = "Avengers : End Game";
-            System.out.println("Nama Film : Avangers : End Game");
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
-            System.out.println("Total Harga : " + objMain.HitungHarga());
-            JOptionPane.showMessageDialog(null,"\nPembayaran" + "\nTotal Tiket : " + JumTiket + "\nJumlah yang harus dibayar : " + objMain.HitungHarga(),"Bayar",JOptionPane.INFORMATION_MESSAGE);
-            String Uang = JOptionPane.showInputDialog("Masukan Jumlah Uang : ");
-            System.out.println("Masukan Jumlah Uang : " + Uang);
-            objMain.Uang = Integer.parseInt(Uang);
-            System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
-
-
-        }else if(evt.getActionCommand() == Actions.film4.name()){
-
-            String NamaFilm = "Superman";
-            System.out.println("Nama Film : Superman");
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
-            System.out.println("Total Harga : " + objMain.HitungHarga());
-            JOptionPane.showMessageDialog(null,"\nPembayaran" + "\nTotal Tiket : " + JumTiket + "\nJumlah yang harus dibayar : " + objMain.HitungHarga(),"Bayar",JOptionPane.INFORMATION_MESSAGE);
-            String Uang = JOptionPane.showInputDialog("Masukan Jumlah Uang : ");
-            System.out.println("Masukan Jumlah Uang : " + Uang);
-            objMain.Uang = Integer.parseInt(Uang);
-            System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
-
-        }
         // aksi pada saat memekan tombol quit
         do{
 
