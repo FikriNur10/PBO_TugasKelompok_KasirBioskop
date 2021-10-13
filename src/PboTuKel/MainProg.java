@@ -18,12 +18,6 @@ public class MainProg implements ActionListener{
 
     public static void main(String[] args) {
 
-        FormLogin();
-
-    }
-
-    static void FormLogin(){
-
         JPanel panel = new JPanel();
         JFrame frame = new JFrame();
         frame.setSize(350,200);
@@ -61,6 +55,7 @@ public class MainProg implements ActionListener{
         panel.add(success);
 
         frame.setVisible(true);
+
     }
 
     @Override
