@@ -17,25 +17,25 @@ public class Menu extends Component implements ActionListener{
 
     public void MenuPil(){
 
-        JFrame frame = new JFrame(" ZZE - Daftar Film");
-        frame.setSize(400,300);
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame = new JFrame(" Daftar Film");
+        frame.setSize(400,300); // Mengatur Frame
+        frame.setResizable(false); // Membuat ukuran frame tidak bisa diubah oleh user
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Saat menekan exit program akan berhenti
         frame.getContentPane();
         JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(60, 10, 40, 10));
+        panel.setBorder(BorderFactory.createEmptyBorder(60, 10, 40, 10)); // Untuk memberi batas pada pinggiran frame
         frame.add(panel);
 
         // film 1 button //
-        film1 = new JButton(); // image description and put image
-        film1.setPreferredSize(new Dimension(120,30));
-        film1.setText("Squid Game");
-        film1.setActionCommand(Actions.film1.name());
+        film1 = new JButton(); // Membuat button
+        film1.setPreferredSize(new Dimension(120,30)); // Mengatur ukuran buttn
+        film1.setText("Squid Game"); // memberi nama button
+        film1.setActionCommand(Actions.film1.name()); // membuat button agar bisa
         film1.addActionListener((ActionListener) new Menu());
-        panel.add(film1);
+        panel.add(film1); // mengadd button ke frame
 
         // film 2 //
-        film2 = new JButton(); // image description and put image
+        film2 = new JButton(); // Membuat tombol
         film2.setPreferredSize(new Dimension(120,30));
         film2.setActionCommand(Actions.film2.name());
         film2.addActionListener((ActionListener) new Menu());
@@ -43,7 +43,7 @@ public class Menu extends Component implements ActionListener{
         panel.add(film2);
 
         // film 3 //
-        film3 = new JButton(); // image description and put image
+        film3 = new JButton(); // Membuat tombol
         film3.setPreferredSize(new Dimension(120,30));
         film3.setActionCommand(Actions.film3.name());
         film3.addActionListener((ActionListener) new Menu());
@@ -51,7 +51,7 @@ public class Menu extends Component implements ActionListener{
         panel.add(film3);
 
         // film 4 //
-        film4 = new JButton(); // image description and put image
+        film4 = new JButton(); // Membuat tombol
         film4.setPreferredSize(new Dimension(120,30));
         film4.setActionCommand(Actions.film4.name());
         film4.addActionListener((ActionListener) new Menu());

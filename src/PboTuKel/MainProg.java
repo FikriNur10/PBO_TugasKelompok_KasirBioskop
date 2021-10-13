@@ -27,9 +27,6 @@ public class MainProg implements ActionListener{
 
     }
 
-    private static void dispose() {
-    }
-
     static void FormLogin(){
 
         JPanel panel = new JPanel();
