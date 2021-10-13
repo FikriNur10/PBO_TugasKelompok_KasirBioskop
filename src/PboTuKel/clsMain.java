@@ -14,6 +14,7 @@ public class clsMain {
         String IdUser = "admin";
         return IdUser;
     }
+
     // untuk password
     public String PassUser() {
 
@@ -21,11 +22,14 @@ public class clsMain {
         return PassUser;
     }
 
+    // Untuk menghitung harga
     public int HitungHarga(){
 
         return JumTiket*50000;
 
     }
+
+    // Untuk menghitung kembalian
     public float Kembalian(){
 
         return Uang-HitungHarga();

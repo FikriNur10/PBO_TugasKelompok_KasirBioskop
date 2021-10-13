@@ -25,8 +25,6 @@ public class MainProg implements ActionListener{
         clsMain objMain = new clsMain();
         FormLogin();
 
-
-
     }
 
     private static void dispose() {

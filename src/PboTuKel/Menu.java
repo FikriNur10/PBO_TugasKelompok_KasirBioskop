@@ -85,7 +85,7 @@ public class Menu extends Component implements ActionListener{
             System.out.println("Masukan Jumlah Uang : " + Uang);
             objMain.Uang = Integer.parseInt(Uang);
             System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumalh Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
         }else if (evt.getActionCommand() == Actions.film2.name()){
 
@@ -102,7 +102,7 @@ public class Menu extends Component implements ActionListener{
             System.out.println("Masukan Jumlah Uang : " + Uang);
             objMain.Uang = Integer.parseInt(Uang);
             System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumalh Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
         }else if(evt.getActionCommand() == Actions.film3.name()){
 
@@ -119,7 +119,7 @@ public class Menu extends Component implements ActionListener{
             System.out.println("Masukan Jumlah Uang : " + Uang);
             objMain.Uang = Integer.parseInt(Uang);
             System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumalh Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
 
         }else if(evt.getActionCommand() == Actions.film4.name()){
@@ -136,12 +136,14 @@ public class Menu extends Component implements ActionListener{
             System.out.println("Masukan Jumlah Uang : " + Uang);
             objMain.Uang = Integer.parseInt(Uang);
             System.out.println("Total Kembalian : " + objMain.Kembalian());
-            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumalh Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
         }
 
         do{
+
             System.exit(0);
+
         }while(evt.getActionCommand() == Actions.Keluar.name());
 
     }
