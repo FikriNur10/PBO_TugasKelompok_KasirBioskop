@@ -17,7 +17,7 @@ public class Menu extends Component implements ActionListener{
 
     public void MenuPil(){
 
-        JFrame frame = new JFrame(" Daftar Film");
+        JFrame frame = new JFrame("Daftar Film");
         frame.setSize(400,300); // Mengatur Frame
         frame.setResizable(false); // Membuat ukuran frame tidak bisa diubah oleh user
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Saat menekan exit program akan berhenti
@@ -30,7 +30,7 @@ public class Menu extends Component implements ActionListener{
         film1 = new JButton(); // Membuat button
         film1.setPreferredSize(new Dimension(120,30)); // Mengatur ukuran buttn
         film1.setText("Squid Game"); // memberi nama button
-        film1.setActionCommand(Actions.film1.name()); // membuat button agar bisa
+        film1.setActionCommand(Actions.film1.name()); // membuat button agar bisa mengeksekusi sesuatu
         film1.addActionListener((ActionListener) new Menu());
         panel.add(film1); // mengadd button ke frame
 
@@ -74,9 +74,9 @@ public class Menu extends Component implements ActionListener{
         clsMain objMain = new clsMain();
         if(evt.getActionCommand() == Actions.film1.name()){
 
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Nama Film : Squid Game");
             String NamaFilm = "Squid Game";
+            System.out.println("Nama Film : Squid Game");
+            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
             System.out.println("Total Harga : " + objMain.HitungHarga());
@@ -89,11 +89,9 @@ public class Menu extends Component implements ActionListener{
 
         }else if (evt.getActionCommand() == Actions.film2.name()){
 
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Nama Film : Joker 2019");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
             String NamaFilm = "Joker 2019";
+            System.out.println("Nama Film : Joker 2019");
+            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
             System.out.println("Total Harga : " + objMain.HitungHarga());
@@ -106,11 +104,9 @@ public class Menu extends Component implements ActionListener{
 
         }else if(evt.getActionCommand() == Actions.film3.name()){
 
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Nama Film : Avangers : End Game");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
             String NamaFilm = "Avengers : End Game";
+            System.out.println("Nama Film : Avangers : End Game");
+            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
             System.out.println("Total Harga : " + objMain.HitungHarga());
@@ -123,11 +119,10 @@ public class Menu extends Component implements ActionListener{
 
 
         }else if(evt.getActionCommand() == Actions.film4.name()){
-            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
-            System.out.println("Nama Film : Superman");
-            System.out.println("Masukan Jumlah Tiket : " + JumTiket);
-            objMain.JumTiket = Integer.parseInt(JumTiket);
+
             String NamaFilm = "Superman";
+            System.out.println("Nama Film : Superman");
+            String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
             System.out.println("Total Harga : " + objMain.HitungHarga());
@@ -139,7 +134,7 @@ public class Menu extends Component implements ActionListener{
             JOptionPane.showMessageDialog(null,"\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang +"\nKembalian : "+ objMain.Kembalian(),"Pembayaran",JOptionPane.INFORMATION_MESSAGE);
 
         }
-
+        // aksi pada saat memekan tombol quit
         do{
 
             System.exit(0);
