@@ -95,15 +95,23 @@ public class Menu extends Component implements ActionListener{
                 System.out.println("Nama Film : Superman");
 
             }
+            // aksi pada saat memekan tombol quit
+            do{
+
+                System.exit(0);
+
+            }while(evt.getActionCommand() == Actions.Keluar.name());
 
             String JumTiket = JOptionPane.showInputDialog("Masukan Jumlah Tiket : ");
             System.out.println("Masukan Jumlah Tiket : " + JumTiket);
             objMain.JumTiket = Integer.parseInt(JumTiket);
+
             if(objMain.JumTiket == 0){
 
                 JOptionPane.showMessageDialog(null,"Jumlah tiket tidak valid","Error",JOptionPane.ERROR_MESSAGE);
 
             }
+
         }while(objMain.JumTiket < 1);
 
         String NamaFilm = null;
@@ -114,13 +122,6 @@ public class Menu extends Component implements ActionListener{
         objMain.Uang = Integer.parseInt(Uang);
         System.out.println("Total Kembalian : " + objMain.Kembalian());
         JOptionPane.showMessageDialog(null, "\n\t ===== Struk ===== " + "\nFilm : " + NamaFilm + "\nJumlah Tiket : " + objMain.JumTiket + "\nTotal Harga : " + objMain.HitungHarga() + "\nTotal Bayar : " + Uang + "\nKembalian : " + objMain.Kembalian(), "Pembayaran", JOptionPane.INFORMATION_MESSAGE);
-
-        // aksi pada saat memekan tombol quit
-        do{
-
-            System.exit(0);
-
-        }while(evt.getActionCommand() == Actions.Keluar.name());
 
     }
 

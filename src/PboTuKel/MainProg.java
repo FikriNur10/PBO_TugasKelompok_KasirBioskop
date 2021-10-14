@@ -18,21 +18,21 @@ public class MainProg implements ActionListener{
 
     public static void main(String[] args) {
 
-        JPanel panel = new JPanel();
-        JFrame frame = new JFrame();
-        frame.setSize(350,200);
+        JPanel panel = new JPanel(); // inisialisasi JPanel dengan nama panel
+        JFrame frame = new JFrame(); // inisialisasi JFrame dengan nama frame
+        frame.setSize(350,200); // membuat frame dengan ukuran 350 x 200 px
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(panel);
 
         panel.setLayout(null);
 
         // Kotak Username //
-        userLabel = new JLabel("User");
-        userLabel.setBounds(10,20,80,25);
+        userLabel = new JLabel("User"); // membuat label user
+        userLabel.setBounds(10,20,80,25); // mengatur posisi dan membuat ukuran label user
         panel.add(userLabel);
 
-        userText = new JTextField(20);
-        userText.setBounds(100,20,165,25);
+        userText = new JTextField(20); // membuat kolom untuk mengisi user id
+        userText.setBounds(100,20,165,25); // mengatur posisi dan membuat ukuran kolom pengisian
         panel.add(userText);
 
         // Kotak Password //
@@ -45,12 +45,12 @@ public class MainProg implements ActionListener{
         panel.add(passwordText);
 
         // tombol login //
-        button = new JButton("Login");
-        button.setBounds(10,80,80,25);
-        button.addActionListener((ActionListener) new MainProg());
+        button = new JButton("Login"); // membuat button login
+        button.setBounds(10,80,80,25); // mengatur posisi dan ukuran botton
+        button.addActionListener((ActionListener) new MainProg()); // membuat botton interaktif
         panel.add(button);
 
-        success = new JLabel();
+        success = new JLabel(); // membuat panel tulisan jika login berhasil
         success.setBounds(10,110,300,25);
         panel.add(success);
 
@@ -59,9 +59,9 @@ public class MainProg implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(java.awt.event.ActionEvent evt) {
+    public void actionPerformed(java.awt.event.ActionEvent evt) { // berfungsi sebagai aksi saat tombol login diketik
 
-        clsMain objMain = new clsMain();
+        clsMain objMain = new clsMain(); // inisialisasi clsMain dengan objMain
         Menu objMenu = new Menu();
         String IdUser = userText.getText();
         String PassUser = passwordText.getText();
